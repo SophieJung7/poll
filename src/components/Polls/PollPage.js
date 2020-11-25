@@ -32,57 +32,62 @@ class PollPage extends Component {
       ).toFixed(2)
     );
     const noPercentage = 100 - yesPercentage;
-    return (
-      <div className='container mt-5'>
-        <h3>{poll.title}</h3>
-        <hr className='my-4'></hr>
-        <p className='text-right'>{`PUBLISHED : ${new Date(
-          poll.publishedDate
-        )}`}</p>
-        <div className='jumbotron'>
-          <h5>{poll.title}</h5>
-          <div className='row'>
-            <div className='col-sm-8 mt-5'>
-              <button
-                className='btn btn-warning d-block'
-                style={{ width: '5rem' }}
-                onClick={() =>
-                  this.voteYes(this.state.pollResults.answers[0].id)
-                }
-              >
-                Yes
-              </button>
-              <button
-                className='btn btn-success d-block mt-2'
-                style={{ width: '5rem' }}
-                onClick={() =>
-                  this.voteYes(this.state.pollResults.answers[1].id)
-                }
-              >
-                No
-              </button>
-            </div>
-            <div className='col-sm-4'>
-              <PieChart
-                data={[
-                  {
-                    title: 'One',
-                    value: yesPercentage,
-                    color: '#E38627',
-                  },
-                  {
-                    title: 'Two',
-                    value: noPercentage,
-                    color: '#C13C37',
-                  },
-                ]}
-              />
-              ;
+    if (poll) {
+      return (
+        <div className='container mt-5'>
+          <h3>{poll.title}</h3>
+          <hr className='my-4'></hr>
+          <p className='text-right'>{`PUBLISHED : ${new Date(
+            poll.publishedDate
+          )}`}</p>
+          <div className='jumbotron'>
+            <h5>{poll.title}</h5>
+            <div className='row'>
+              <div className='col-sm-8 mt-5'>
+                <button
+                  className='btn btn-warning d-block'
+                  style={{ width: '5rem' }}
+                  onClick={() =>
+                    this.voteYes(this.state.pollResults.answers[0].id)
+                  }
+                >
+                  Yes
+                </button>
+                <button
+                  className='btn btn-success d-block mt-2'
+                  style={{ width: '5rem' }}
+                  onClick={() =>
+                    this.voteYes(this.state.pollResults.answers[1].id)
+                  }
+                >
+                  No
+                </button>
+              </div>
+              <div className='col-sm-4'>
+                <PieChart
+                  data={[
+                    {
+                      title: 'One',
+                      value: yesPercentage,
+                      color: '#E38627',
+                    },
+                    {
+                      title: 'Two',
+                      value: noPercentage,
+                      color: '#C13C37',
+                    },
+                  ]}
+                />
+                ;
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      window.location.reload(false);
+      return null;
+    }
   }
 }
 

@@ -1,11 +1,16 @@
-# sophie-poll
+# Poll Assignment
 
-Poll Application
+## App Instruction
 
-## I'm a second level heading
+- npm install
+- npm run start
 
-- Bullet point
-- Another bullet point
+## Landing Page
 
-1. Numbers
-2. More numbers
+- If you click the thumbnails, you can move to Poll Page.
+- I couldn't finish the voting fuction. Instead, when you click 'Yes' or 'No', you can see the answer ID inside console.
+
+## Voting Results DB
+
+- At PollsList.js, I used state to initialize the voting results data.
+- At PollPage.js, I made pollResults.json file and initialized the selected poll result in constructor.
