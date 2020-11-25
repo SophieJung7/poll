@@ -1,0 +1,85 @@
+{
+  "pollResults": [
+    {
+      "id": 1,
+      "answers": [
+        {
+          "id": 1,
+          "count": 1
+        },
+        {
+          "id": 2,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "answers": [
+        {
+          "id": 3,
+          "count": 1
+        },
+        {
+          "id": 4,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "answers": [
+        {
+          "id": 5,
+          "count": 1
+        },
+        {
+          "id": 6,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "answers": [
+        {
+          "id": 7,
+          "count": 1
+        },
+        {
+          "id": 8,
+          "count": 5
+        },
+        {
+          "id": 9,
+          "count": 5
+        },
+        {
+          "id": 10,
+          "count": 5
+        },
+        {
+          "id": 11,
+          "count": 5
+        },
+        {
+          "id": 12,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "answers": [
+        {
+          "id": 5,
+          "count": 13
+        },
+        {
+          "id": 6,
+          "count": 14
+        }
+      ]
+    }
+  ]
+}
